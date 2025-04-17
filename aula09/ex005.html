@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: crimson;
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos <strong>DOM</strong></h1>
+    <p>Aqui vai o resultado</p>
+    <div id="msg">Clique em mim</div>
+    <div id="x">Nunca</div>
+
+    <script>
+
+        let corpo = document.body
+
+        corpo.style.background = 'black'
+
+
+
+        let p1 = window.document.getElementsByTagName('p')[0]
+
+        document.write('Sonic 8 ' + p1.innerText)
+
+        let d = document.getElementById('msg')
+
+        d.style.color = 'blue'
+        d.style.background = 'grey'
+
+        let x = document.querySelector('div#x') //exemplo de comando usando por SELETOR div(para representar a tag) #(para dizer que é um ID) e msg(nome do ID)
+
+        x.style.background = 'red'
+
+
+
+
+
+
+    </script>
+</body>
+</html>

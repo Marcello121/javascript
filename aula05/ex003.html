@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 22px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Qual seu nome?')
+
+        document.write(`Seu nome é <strong>${nome}</strong> e tem ${nome.length} letras </br> </br>`) //É possível usar tags de HTML dentro das strings
+
+        
+        document.write(`Seu nome em maiúsculo fica ${nome.toLocaleUpperCase()} </br> </br>`) // Não esquecer dos () depois da função
+
+        document.write(`Seu nome em minúsculas fica ${nome.toLocaleLowerCase()}`)
+    </script>
+    
+</body>
+</html>

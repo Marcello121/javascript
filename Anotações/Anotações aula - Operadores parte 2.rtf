@@ -1,0 +1,132 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1046{\fonttbl{\f0\fnil\fcharset0 Courier New;}{\f1\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red255\green0\blue0;\red155\green0\blue211;\red0\green77\blue187;\red0\green0\blue0;\red0\green0\blue128;\red255\green255\blue255;\red255\green255\blue0;\red0\green176\blue80;}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\b\i\f0\fs48\lang22 Operadores Relacionais\fs32\par
+\i0\fs28 Os operadores:\fs32  \par
+\par
+\cf1\fs28 > \cf0 - Significa maior que:\par
+\cf1 < \cf0 - Significa menor que:\par
+\cf1 >=\cf0  - Maior ou igual que:\par
+\cf1 <=\cf0  - Menor ou igual que:\par
+\cf1 ==\cf0  - Igual :\par
+\cf1 !=\cf0  - N\'e3o igual (diferente): diferencia VALOR \par
+\cf1 !==\cf0  - Desigual restrito que \'e9 diferente do de cima e significa: diferencia VALOR e TIPO\par
+\par
+\b0 Exemplos de algumas express\'f5es e seus resultados:\par
+\par
+5 \cf1\b > \cf0\b0 2  \b\i true\b0\i0\par
+7 \cf1\b < \cf0\b0 4  \b\i false\b0\i0\par
+8 \cf1\b >=\cf0  \b0 8  \b\i true\b0\i0\par
+9 \cf1\b <=\cf0  \b0 7  \b\i false\b0\i0\par
+5 \cf1\b ==\cf0  \b0 5  \b\i true\b0\i0\par
+4 \cf1\b !=\cf0  \b0 4  \b\i false\i0\fs32\par
+\par
+\b0\fs24 Para toda express\'e3o com operador relacional o resultado vai ser sempre um valor booleano, ou seja, \b\i true \b0\i0 ou \b\i false \par
+\b0\i0 Quando se tem na mesma linha operadores relacionais e aritim\'e9ticos, os aritim\'e9ticos s\'e3o calculados \i\fs28 primeiro \i0\fs24\par
+Ou seja:\par
+\cf1\b\fs28 var \cf2 a \cf0 = 10\par
+\cf1 var \cf2 b \cf0 = 20\par
+\par
+\cf2 a \cf0 > \cf2 b \cf0\par
+false\par
+\cf2 b \cf0 > \cf2 a\cf0\par
+true\par
+\cf2 b \cf0 > \cf2 a \cf0 + 45\par
+false\par
+\b0\fs24\par
+Isto porque o \cf2\b\fs28 a \cf0\fs24 + 45 \b0 foi calculado antes do \cf2\b\fs28 b \cf0\fs24 > \cf2\fs28 a\cf0\b0\fs24 , ou seja, quando ele foi verificar se \cf2\b\fs28 b \cf0\b0\fs24 era maior que \cf2\b\fs28 a\cf0\b0\fs24 , o \cf2\b\fs28 a\b0  \cf0\fs24 j\'e1 estava com \b + 45\b0  ou seja \b 55,\b0  e \b 20 \b0 (\cf2\b\fs28 b\cf0\b0\fs24 ) n\'e3o \'e9 maior que \b 55 \b0 (\cf2\b\fs28 a\cf0\b0\fs24 )\par
+\par
+Existe uma quest\'e3o de identidade nos operadores, ex:\par
+\par
+\b\fs28 5 \cf1 ==\cf0  5  \i\fs24 true  -----  exemplo 1\b0\i0\par
+\b\fs28 5 \cf1 == \cf0\b0\fs24 '\b\fs28 5\b0\fs24 '  \b\i true ----- exemplo 2\b0\i0\par
+\b\fs28 5 \cf1 === \cf0\b0\fs24 '\b\fs28 5\b0\fs24 '  \b\i false ----- exemplo 3\par
+\fs28 5 \cf1\i0 ===\fs24  \cf0\i\fs28 5\fs24   true ----- exemplo 4\par
+
+\pard\sa200\sl240\slmult1\par
+
+\pard\sa200\sl276\slmult1\par
+\b0\i0\par
+Para o JS o \b\i\fs28 5 \b0\i0\fs24\'e9 igual ao \fs28 '\b\i 5\b0\i0 '\fs24 ,\fs28  \fs24 ainda que o segundo esteja em formato de \cf3\i\fs28 string\cf0\i0\fs24 , e \'e9 por isso que existe o \b\i operador de identidade/igualdade restrita\b0\i0 , que \'e9 o \i terceiro no exemplo\i0 , esse v\'ea todos os dados, se o \b\fs28 5 \b0\fs24\'e9 igual ao outro '\b\fs28 5' \b0\fs24 e se ele tem o mesmo \cf3\i tipo\cf0\i0 , ou seja se \'e9 um \cf3\i\fs28 number \cf0\i0\fs24 ou \cf3\i\fs28 string\par
+\par
+\cf4\i0 Algumas coisas sobre Operadores relacionais:\par
+\par
+\cf1 var\cf4  \cf2\b\i x \cf4\b0\i0 = \b\i 5\b0\i0\par
+\par
+\cf1 var \cf2\b\i y \cf4\b0\i0 = \b\i '5'\b0\i0\par
+\par
+\cf2\b\i x\b0\i0  \cf1\b !=\cf4\b0  \cf2\b\i y   \cf4 false \i0  \b0 --> Porque ele \'e9 um operador que identifica se os dados s\'e3o diferentes, e quando eles s\'e3o iguais, ele d\'e1 false, se fossem diferentes ele daria true \b\i\par
+\par
+\cf2 x \cf1\i0 !==\cf4\b0  \cf2\b\i y   \cf4 true \i0  \b0 --> Aqui, ele d\'e1 true porque apesar dos n\'fameros serem iguais, eles s\'e3o de tipos diferentes, \cf3\i string \cf4\i0 e \cf3\i number\cf4\i0 . Em resumo: \b\i tipos diferentes mas valores internos iguais\par
+\par
+\highlight5 -------------------------------------------------\par
+\highlight0\par
+\fs52 Operadores l\'f3gicos\par
+\cf6\highlight1\b0\i0 !\cf4\highlight0\fs28  - \b Nega\'e7\'e3o\b0\par
+\cf6\highlight1\b\fs48 &&\cf4\highlight0\b0\fs28  - \b Conjun\'e7\'e3o\b0  (\cf6\highlight1\b\i\fs44 E\cf4\b0\i0\fs28  \highlight0 l\'f3gico)\par
+\cf6\highlight1\b\fs44 ||\cf4\highlight0\b0\fs28  - \b Disjun\'e7\'e3o\b0  (\cf6\highlight1\b\i\fs44 OU\cf4\highlight0\b0\i0\fs28  l\'f3gico\par
+\par
+Exemplos de como funcionam:\par
+\par
+\cf6\highlight1\b\fs72 !\cf4\highlight0\b0\par
+\fs28 (\b\i Nega\'e7\'e3o\b0\i0 )\fs72\par
+\fs28  \par
+\cf7\highlight4 true \cf6 -->\cf7  false\cf4\highlight0   (Se uma coisa \'e9 \b\i verdadeira\b0\i0 , ela automaticamente n\'e3o \'e9 \b\i falsa\b0\i0 )\par
+\cf7\highlight4 false\cf6  --> \cf7 true\cf6   \cf4\highlight0 (Se uma coisa \'e9 \b\i falsa\b0\i0 , ela automaticamente n\'e3o \'e9 \b\i verdadeira\b0\i0 ).\par
+\par
+\highlight5\b -------------------------------------------------\highlight0\par
+\b0\par
+\cf6\highlight1\b\fs72 &&\cf4\highlight0\b0\par
+\fs28 (\b\i Disjun\'e7\'e3o\b0\i0 , \cf6\highlight1\b\i\fs40 E\highlight0\b0\fs28  \cf4\b l\'f3gico\b0\i0 )\fs72\par
+\par
+\cf7\highlight4\b\i\fs28 true\b0\i0  \cf6\highlight1\b\i\fs44 &&\highlight4\b0\i0\fs28  \cf7\b true \cf6\b0 --> \cf7\b\i true\cf4 ###\b0\i0\par
+\cf7\b true \cf6\highlight1\i\fs44 &&\highlight4\b0\i0\fs28  \cf7\b false \cf6\b0 --> \cf7\b\i false\cf4 #\highlight0\b0\i0\par
+\cf7\highlight4\b\i false \cf6\highlight1\fs44 &&\highlight4\b0\i0\fs28  \cf7\b\i false \cf6\b0\i0 --> \cf7\b\i false\cf4\highlight0\b0\i0\par
+\par
+Esse operador s\'f3 responde como \b\i true \b0\i0 quando voc\'ea tem \b\i dois trues\b0\i0 , se n\'e3o tiver, \'e9 \b\i false \b0\i0 sempre.\par
+\par
+Por exemplo, se voc\'ea \'e9 um vendedor de \i canetas\i0  e o cliente te fala que quer uma caneta \cf3\b\i azul \cf4\b0\i0 E uma \cf1\b\i vermelha\cf4\b0\i0 , ele s\'f3 vai ficar satisfeito se ele receber \b\i ambas\b0\i0 . Note, ele \b\i N\'c3O \b0\i0 quer uma azul e uma \cf8\b\i verde\cf4\b0\i0 , ou uma \cf1\b vermelha \cf4\b0 e uma \cf2\b\i roxa\cf4\b0\i0 , ou voc\'ea entrega exatamente uma \cf3\b\i azul \cf4\fs40 E\b0\i0\fs28  uma \cf1\b\i vermelha \cf4\b0\i0 ou ele n\'e3o vai fechar a venda.\par
+\par
+\highlight5\b -------------------------------------------------\highlight0\par
+\b0\par
+\cf6\highlight1\b\fs72 ||\cf4\highlight0\b0\par
+\fs28 (\b\i Conjun\'e7\'e3o\b0 , \cf6\highlight1\b\i0\fs40 OU\cf4\highlight0\b0\fs28  \b\i l\'f3gico\b0\i0 )\par
+\par
+\cf7\highlight4\b\i true \cf6\highlight1\i0\fs44 ||\highlight4\b0\fs28  \cf7\b\i true \cf6\b0\i0 --> \cf7\b\i true\cf0 ###\b0\i0\par
+\cf7\b\i true \cf6\highlight1\i0\fs44 ||\highlight4\b0\fs28  \cf7\b\i false \cf6\b0\i0 --> \cf7\b\i true\cf0 ##\cf4\highlight0\b0\i0\par
+\cf7\highlight4\b\i false \cf6\highlight1\i0\fs44 ||\highlight4\b0  \cf7\b\i\fs28 false \cf6\b0\i0 --> \cf7\b\i false\cf4\highlight0\b0\i0\par
+\par
+Diferente do operador anterior, este s\'f3 precisa que \b\i UM\b0\i0  dos valores seja \b\i true\b0\i0  para ele resultar em \b\i true\b0\i0 , ou seja, se fosse no exemplo da caneta (citado anteriormente) o cliente ficaria satisfeito com qualquer uma dessas combina\'e7\'f5es:\par
+\par
+Uma caneta \cf3\b\i azul\b0\i0  \cf4 e uma \cf1\b\i vermelha\cf4\b0\i0\par
+\par
+Uma caneta \cf1\b\i vermelha \cf4\b0\i0 e uma \cf2\b\i roxa\cf4\b0\i0\par
+\par
+Uma \i caneta\b  \cf3 azul\cf4\b0\i0  e uma \cf8\b\i verde\par
+\par
+\cf0\highlight5 -------------------------------------------------\par
+\par
+\highlight0\b0\i0 Se existirem operadores de todos os tipos na mesma linha, eles v\'e3o seguir essa ordem:\par
+\par
+\b\fs44 1\b0\'ba \b\fs28 - \cf2\i Aritim\'e9ticos \cf0\i0 -\b0  \cf2\b\i +\cf0 ,\cf2  -\cf0 ,\cf2  *\cf0 ,\cf2  **\cf0 ,\cf2  ()\cf0 ,\cf2  %..,\cf0\b0\i0\par
+\par
+\b\fs36 2\b0\'ba \b\fs28 - \cf3\i Relacionais \cf0\i0 -\b0  \cf3\b\i >\cf0 ,\cf3  <\cf0 ,\cf3  !=\cf0 ,\cf3  !==\cf0 ,\cf3  ==\cf0 ,\cf3  ===\cf0 ,\cf3  >=\cf0 ,\cf3  <=\cf0\b0\i0 ..,\cf3\par
+\cf0\par
+\b\fs32 3\b0\'ba \b\i\fs28 - \cf1 L\'f3gicos \cf0\i0 - \cf1\i !\cf0 ,\cf1  &&\cf0 ,\cf1  ||\par
+\par
+\cf0\highlight5\b0\i0 -------------------------------------------------\par
+\par
+\highlight0 Se tivermos, em uma mesma linha um operador \cf6\highlight1\b E\cf0\highlight0\b0  \b\i l\'f3gico\b0\i0  \cf6\highlight1\b\fs36 &&\highlight0\b0\fs28 ,\cf0 um \cf6\highlight1\b\fs36 OU\cf0\highlight0\b0\fs28  \b\i l\'f3gico\b0\i0  \cf6\highlight1\b ||\cf0\highlight0\b0  e um \b\i n\'e3o l\'f3gico\b0\i0  \cf6\highlight1\fs40 !\cf0\highlight0\fs28 , A ordem ser\'e1 essa:\par
+\par
+\b 1\'ba \cf6\highlight1\fs44 !\cf0\highlight0\fs28  - N\'e3o\b0\par
+\par
+\b 2\'ba \cf6\highlight1\fs44 &&\cf0\highlight0\b0\fs28  \b - \cf6\highlight1\fs36 E\cf0\highlight0\b0\fs28  \b l\'f3gico\b0\par
+\par
+\b 3\'ba \cf6\highlight1\fs44 ||\cf0\highlight0\b0\fs28  \b - \cf6\highlight1\fs36 OU\cf0\highlight0\b0\fs28  \b l\'f3gico\b0\par
+\par
+\highlight5\b\i\par
+\cf4\highlight0\b0\i0\par
+\par
+\b\i\f1\fs32\par
+}
+ 

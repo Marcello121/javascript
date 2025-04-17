@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        input{
+            font-family: 'Courier New', Courier, monospace;
+
+            width: 100px;
+        }
+
+        div#r1{
+            margin: 20px;
+            background-color: rgb(67, 67, 67);
+
+            height: 50px;
+            color: white;
+            font-size: 20px;
+
+        
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando somando e somando</h1>
+
+    <input type="number" name="n1" id="n1"> +
+    <input type="number" name="n2" id="n2"> =
+
+    <input type="submit" id="somar" value="FEITO" onclick="somar()"> 
+
+    <div id="r1">
+        Resultado
+    </div>
+
+<script>
+    
+
+    function somar(){
+        let tn1 = document.getElementById('n1')
+
+        let tn2 = document.getElementById('n2')
+
+        let num1 = Number(n1.value)
+
+        let num2 = Number(n2.value)
+
+        let resultado = num1 + num2
+
+        alert(`A soma de ${num1} + ${num2} é igual a: ${resultado}`)
+
+        let r1 = document.getElementById('r1')
+
+        r1.innerText = `A soma de ${num1} + ${num2} é igual a: ${resultado}`
+
+        
+
+        
+
+        
+
+
+        
+
+}
+
+
+    
+
+</script>
+
+
+    
+</body>
+</html>
