@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercício Verificador de Idade</title>
     <style>
 
         @font-face {
@@ -25,12 +25,19 @@
             display: grid;
             place-items: center;
 
-            background-color: rgb(44, 34, 105);
+            background-color: #1232E5;
+        }
+
+        h1{
+            color: white;
+            text-shadow: 3px 4px black;
+            
         }
 
         main{
-            background-color: rgba(0, 0, 0, 0.664);
+            background-color: rgba(0, 2, 3, 0.664);
             color: white;
+            
 
             padding: 20px;
             margin: 20px;
@@ -39,11 +46,31 @@
 
             width: 600px;
             height: 500px;
+
+            box-shadow: 8px 10px rgba(0, 0, 0, 0.76);
+        }
+
+        div#r1{
+            text-align: center;
+            padding: 15px;
+            
         }
 
         div#imagem{
-            width: 300px;
-            height: 350px;
+
+            margin: auto;
+
+            border: 15px;
+            padding: 15px;
+            
+
+            width: 250px;
+            height: 250px;
+        }
+
+        input#verificar{
+            height: 50px;
+            width: 80px;
         }
     </style>
 </head>
@@ -60,10 +87,10 @@
     <p>
         <p>Sexo:  
             <label for="mas">Masculino</label>
-            <input type="radio" id="mas" name="radio" onselect="mas" required>
+            <input type="radio" id="mas" name="radio"  required>
 
             <label for="fem">Feminino</label>
-            <input type="radio" id="fem" name="radio" onselect="fem" required>
+            <input type="radio" id="fem" name="radio"  required>
         </p>
         <!-- Usando o type="radio", o NAME das opções tem que ser igual mas o ID tem que ser diferetne-->
     </p>
@@ -74,9 +101,11 @@
 
     <div id="r1">
         Preencha os dados acima para ver o resultado
-        <div id="imagem">
-            5555555555555
-        </div>
+        
+    </div>
+
+    <div id="imagem">
+            
     </div>
     
     
@@ -98,20 +127,81 @@
 
         let dt1 = Number(data.value)
 
-        let contaNascimento = dt1 -= 2025
+        let contaNascimento = 2025 - dt1
 
         let imagem = document.getElementById('imagem')
 
         let radio = document.getElementsByName('radio')
 
-        if (contaNascimento >= 18 && fem.checked) {
+        let texto = document.getElementById('r1')
+
+        if (contaNascimento >= 18 && contaNascimento <= 34 && fem.checked) {
 
             imagem.style.backgroundImage = "url('imagens/Mariarenard.webp')";
             imagem.style.backgroundPosition = "top center";
+            imagem.style.borderRadius = '15px';
+            imagem.style.padding = '15px';
+
+            r1.innerText = `Você é uma mulher de ${contaNascimento} anos de idade`
+
+
             
-        } else {
-            alert('nnnnnnnnnnnnnnnnn')
+            
+        } 
+        
+        else if(contaNascimento >= 18 && contaNascimento <= 34 && mas.checked) {
+
+            imagem.style.backgroundImage = "url('imagens/belmont.jpg')";
+            imagem.style.backgroundPosition = "top center";
+            imagem.style.borderRadius = '15px';
+            imagem.style.padding = '15px';
+
+            r1.innerText = `Você é um homem de ${contaNascimento} anos de idade`
+
         }
+
+        else if(contaNascimento >= 8 && contaNascimento <= 17 && fem.checked){
+
+            imagem.style.backgroundImage = "url('imagens/mariaY.jpg')";
+            imagem.style.backgroundPosition = "top center";
+            imagem.style.borderRadius = '15px';
+            imagem.style.padding = '15px';
+
+            r1.innerText = `Você é uma mulher de ${contaNascimento} anos de idade`
+
+        }
+
+
+        else if(contaNascimento >= 8 && contaNascimento <= 17 && mas.checked){
+
+            imagem.style.backgroundImage = "url('imagens/geraltKID.avif')";
+            imagem.style.backgroundPosition = "top left";
+            imagem.style.borderRadius = '15px';
+            imagem.style.padding = '15px';
+
+        }
+
+        else if(contaNascimento >= 35 && fem.checked){
+
+            imagem.style.backgroundImage = "url('imagens/mariaTLOU.webp')";
+            imagem.style.backgroundPosition = "top center";
+            imagem.style.borderRadius = '15px';
+            imagem.style.padding = '15px';
+
+        }
+
+        else if(contaNascimento >= 35 && mas.checked)
+
+            imagem.style.backgroundImage = "url('imagens/tommyTLOU.webp')";
+            imagem.style.backgroundPosition = "top center";
+            imagem.style.borderRadius = '15px';
+            imagem.style.padding = '15px';
+
+
+
+
+
+        
 
         
         
