@@ -71,7 +71,11 @@
         input#verificar{
             height: 50px;
             width: 80px;
+
+            font-size: 17px;
         }
+
+       
     </style>
 </head>
 <body>
@@ -179,6 +183,8 @@
             imagem.style.borderRadius = '15px';
             imagem.style.padding = '15px';
 
+            r1.innerText = `Você é um homem de ${contaNascimento} anos de idade`
+
         }
 
         else if(contaNascimento >= 35 && fem.checked){
@@ -188,6 +194,8 @@
             imagem.style.borderRadius = '15px';
             imagem.style.padding = '15px';
 
+            r1.innerText = `Você é uma mulher de ${contaNascimento} anos de idade`
+
         }
 
         else if(contaNascimento >= 35 && mas.checked)
@@ -196,6 +204,8 @@
             imagem.style.backgroundPosition = "top center";
             imagem.style.borderRadius = '15px';
             imagem.style.padding = '15px';
+
+            r1.innerText = `Você é um homem de ${contaNascimento} anos de idade`
 
 
 
