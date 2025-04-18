@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+
+@font-face {
+    font-family: VCR;
+    src: url(fonte/VCR_OSD_MONO_1.001.ttf);
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+
+    font-family: VCR, Verdana, Geneva, Tahoma, sans-serif;
+
+    
+}
+
+body{
+    display: grid;
+    place-items: center;
+
+    background-color: #1232E5;
+}
+
+h1{
+    color: white;
+    text-shadow: 3px 4px black;
+    
+}
+
+main{
+    background-color: rgba(0, 2, 3, 0.664);
+    color: white;
+    
+
+    padding: 20px;
+    margin: 20px;
+
+    border-radius: 20px;
+
+    width: 600px;
+    height: 500px;
+
+    box-shadow: 8px 10px rgba(0, 0, 0, 0.76);
+}
+
+div#r1{
+    text-align: center;
+    padding: 15px;
+    
+}
+
+div#imagem{
+
+    margin: auto;
+
+    border: 15px;
+    padding: 15px;
+    
+
+    width: 250px;
+    height: 250px;
+}
+
+input#verificar{
+    height: 50px;
+    width: 80px;
+
+    font-size: 17px;
+}
