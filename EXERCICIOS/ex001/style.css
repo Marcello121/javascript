@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    
+
+    display: grid;
+
+    place-items: center;
+
+    
+    font-size: 28px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main{
+    width: 600px;
+    height: 500px;
+
+    background-color: white;
+
+    padding: 15px;
+    margin: 50px;
+    
+    border-radius: 20px;
+
+    
+}
+
+p#textoH{
+    text-align: center;
+    text-shadow: 1px 1px rgba(112, 112, 112, 0.938);
+    
+}
+
+div#imagem{
+    display: block;
+
+    margin: auto;
+    
+
+    width: 300px;
+    height: 250px;
+
+    padding: 20px;
+    margin-top: 90px;
+    border-radius: 300px;
+}
+
+main{
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.616);
+}

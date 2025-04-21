@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício horário</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body id="fundo" onload="carregar()">
+    <main>
+        <p id="textoH">Agora são ?? horas</p>
+
+        
+
+        <div id="imagem">
+            
+
+        </div>
+
+
+    </main>
+
+    <script>
+        
+        function carregar(){
+
+            let texto = document.getElementById('textoH')
+
+            let imagem = document.getElementById('imagem')
+
+            let fundo = document.getElementById('fundo')
+
+            let dataAtual = new Date();
+
+            let horas = dataAtual.getHours();
+            
+
+            if (horas >= 0 && horas < 12){
+                // Manhã
+
+                imagem.style.backgroundImage = "url('imagens/dia.jpg')"
+                texto.innerText = (`Agora são ${horas} horas`);
+                fundo.style.background = '#f9e389'
+                
+            }
+
+            else if (horas >= 13 && horas < 18){
+                // Tarde
+
+
+                imagem.style.backgroundImage = "url('imagens/tarde.jpg')";
+                imagem.style.backgroundPosition = 'bottom center'; 
+                texto.innerText = (`Agora são ${horas} horas`);
+                fundo.style.background = '#A47661';
+            }
+
+            else{
+                // Noite
+                imagem.style.backgroundImage = "url('imagens/noite.webp')";
+                texto.innerText = (`Agora são ${horas} horas`);
+                fundo.style.background = '#494B4B';
+
+            }
+
+        }
+                
+            
+        
+    </script>
+    
+</body>
+</html>

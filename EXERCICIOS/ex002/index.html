@@ -68,10 +68,34 @@
 
         let texto = document.getElementById('r1')
 
-        if (contaNascimento >= 18 && contaNascimento <= 34 && fem.checked) {
+        if(contaNascimento >= 14 && contaNascimento <= 17 && fem.checked){
 
-            imagem.style.backgroundImage = "url('imagens/Mariarenard.webp')";
-            imagem.style.backgroundPosition = "top center";
+        imagem.style.backgroundImage = "url('imagensULTIMATE/F/14yF.webp')";
+        imagem.style.backgroundRepeat = 'no-repeat'
+        imagem.style.borderRadius = '15px';
+        imagem.style.padding = '15px';
+
+        r1.innerText = `Você é uma mulher de ${contaNascimento} anos de idade`
+
+        }
+
+
+        else if(contaNascimento >= 14 && contaNascimento <= 17 && mas.checked){
+
+            imagem.style.backgroundImage = "url('imagensULTIMATE/M/14yM.webp')";
+            imagem.style.backgroundRepeat = 'no-repeat'
+            imagem.style.borderRadius = '15px';
+            imagem.style.padding = '15px';
+
+            r1.innerText = `Você é um homem de ${contaNascimento} anos de idade`
+
+        }
+
+
+        else if (contaNascimento >= 18 && contaNascimento <= 34 && fem.checked) {
+
+            imagem.style.backgroundImage = "url('imagensULTIMATE/F/18yF.webp')";
+            imagem.style.backgroundRepeat = 'no-repeat'
             imagem.style.borderRadius = '15px';
             imagem.style.padding = '15px';
 
@@ -84,8 +108,8 @@
         
         else if(contaNascimento >= 18 && contaNascimento <= 34 && mas.checked) {
 
-            imagem.style.backgroundImage = "url('imagens/belmont.jpg')";
-            imagem.style.backgroundPosition = "top center";
+            imagem.style.backgroundImage = "url('imagensULTIMATE/M/18yM.webp')";
+            imagem.style.backgroundRepeat = 'no-repeat'
             imagem.style.borderRadius = '15px';
             imagem.style.padding = '15px';
 
@@ -93,10 +117,12 @@
 
         }
 
-        else if(contaNascimento >= 8 && contaNascimento <= 17 && fem.checked){
+        
 
-            imagem.style.backgroundImage = "url('imagens/mariaY.jpg')";
-            imagem.style.backgroundPosition = "top center";
+        else if(contaNascimento >= 35 && contaNascimento <= 59 && fem.checked){
+
+            imagem.style.backgroundImage = "url('imagensULTIMATE/F/34yF.webp')";
+            imagem.style.backgroundRepeat = 'no-repeat'
             imagem.style.borderRadius = '15px';
             imagem.style.padding = '15px';
 
@@ -104,11 +130,10 @@
 
         }
 
+        else if(contaNascimento >= 35 && contaNascimento <= 59 && mas.checked){
 
-        else if(contaNascimento >= 8 && contaNascimento <= 17 && mas.checked){
-
-            imagem.style.backgroundImage = "url('imagens/geraltKID.avif')";
-            imagem.style.backgroundPosition = "top left";
+            imagem.style.backgroundImage = "url('imagensULTIMATE/M/34yM.webp')";
+            imagem.style.backgroundRepeat = 'no-repeat'
             imagem.style.borderRadius = '15px';
             imagem.style.padding = '15px';
 
@@ -116,25 +141,33 @@
 
         }
 
-        else if(contaNascimento >= 35 && fem.checked){
-
-            imagem.style.backgroundImage = "url('imagens/mariaTLOU.webp')";
-            imagem.style.backgroundPosition = "top center";
+        else if(contaNascimento >= 60 && fem.checked){
+            imagem.style.backgroundImage = "url('imagensULTIMATE/F/59yF.webp')";
+            imagem.style.backgroundRepeat = 'no repeat'
             imagem.style.borderRadius = '15px';
             imagem.style.padding = '15px';
 
             r1.innerText = `Você é uma mulher de ${contaNascimento} anos de idade`
 
+
+
         }
 
-        else if(contaNascimento >= 35 && mas.checked)
+        else if(contaNascimento >= 60 && mas.checked){
 
-            imagem.style.backgroundImage = "url('imagens/tommyTLOU.webp')";
-            imagem.style.backgroundPosition = "top center";
+            imagem.style.backgroundImage = "url('imagensULTIMATE/M/59yM.webp')";
+            imagem.style.backgroundRepeat = 'no-repeat'
             imagem.style.borderRadius = '15px';
             imagem.style.padding = '15px';
 
             r1.innerText = `Você é um homem de ${contaNascimento} anos de idade`
+
+
+        }
+            
+
+
+        
 
 
 
