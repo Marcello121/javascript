@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgba(52, 88, 155, 0.753);
+
+            display: grid;
+            place-items: center;
+        }
+
+        main{
+            background-color: aliceblue;
+            padding: 15px;
+            border-radius: 15px;
+            text-align: center;
+
+            width: 500px;
+            height: 500px;
+
+            
+            
+
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Sistema de multas</h1>
+
+        <label for="vel"></label>
+        <p>Digite a velocidade: <input type="number" id="vel"></p>
+        <input type="submit" id="calcular" value="Calcular" onclick="calcular()">
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <p id="p3"></p>
+    </main>
+
+    <script>
+        function calcular(){
+            let numVel = document.getElementById('vel')
+
+            let velConver = Number(numVel.value)
+
+            let p1 = document.getElementById('p1')
+
+            let p2 = document.getElementById('p2')
+
+            let p3 = document.getElementById('p3')
+
+            p1.innerHTML = (`<p>Sua velocidade é de <strong>${velConver}</strong> KM/H</p>`)
+
+            if (velConver >= 100){
+                p2.innerText = ('Você está MULTADO')
+                p2.style.fontStyle = 'italic'
+                p2.style.fontWeight = 'bold'
+                
+                
+            }
+
+            else{
+                p2.innerHTML = ('<p>Deu sorte, <strong>dessa vez.</strong></p>')
+
+                p3.innerText = ('Dirija sempre com cinto, vacilão.')
+            }
+
+
+
+        }
+    </script>
+    
+</body>
+</html>

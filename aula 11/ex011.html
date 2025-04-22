@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: darkslateblue;
+            color: white;
+
+            font-family: cursive;
+            display: grid;
+            place-content: center;
+
+        }
+
+        main{
+            
+            text-align: center;
+
+            background-color: aliceblue;
+
+            color: black;
+
+            height: 500px;
+            width: 500px;
+            padding: 15px;
+            border-radius: 15px;
+
+
+            
+
+        }
+
+        input#verificar{
+            width: 200px;
+            height: 50px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Nacionalidade</h1>
+
+        <label for="nac"></label>
+        <p>Digite sua nacionalidade: <input type="text" id="nac"></p>
+        <label for="verificar"></label>
+        <input type="submit" id="verificar" value="Verificar" onclick="verificar()">
+        <p id="p1"></p>
+    </main>
+
+    <script>
+        function verificar(){
+
+            let nac = document.getElementById('nac')
+
+            let nac2 = String(nac.value)
+
+            let p1 = document.getElementById('p1')
+
+            if (nac2 == 'Brasileiro'){
+                p1.innerText = ('Você é BRASILEIRO!')
+
+            }
+
+            else{
+                p1.innerText = ('Você é ESTRANGEIRO')
+            }
+        }
+    </script>
+    
+</body>
+</html>
