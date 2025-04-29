@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+
+
+
+html, body{
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+    
+}
+
+body{
+    display: grid;
+    place-items: center;
+
+    background-color: rgba(23, 111, 211, 0.904);
+}
+
+h1{
+    color: white;
+    text-shadow: 3px 4px black;
+    
+}
+
+main{
+    background-color: rgba(9, 79, 114, 0.781);
+    color: white;
+    
+
+    padding: 20px;
+    margin: 20px;
+
+    border-radius: 20px;
+
+    width: 600px;
+    height: 350px;
+
+    box-shadow: 8px 10px rgba(0, 0, 0, 0.76);
+}
+
+select#itab{
+    width: 150px;
+
+    font-size: 20px;
+}
+
+select#itab::-webkit-scrollbar{
+    display: none;
+}
+
+input#num{
+    height: 25px;
+    font-size: 18px;
+}
