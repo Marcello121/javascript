@@ -3,8 +3,6 @@ function gerar(){
 
     let numero = Number(num1.value)
 
-    let vezes = 1
-
     let contador = 1
 
     itab = document.getElementById ('itab')
@@ -28,11 +26,9 @@ function gerar(){
 
             
 
-            tabuada.text = `${numero} x ${vezes} = ${numero * vezes}`;
+            tabuada.text = `${numero} x ${contador} = ${numero * contador}`;
             
             itab.appendChild(tabuada); // Insere a variável 'tabuada' dentro do 'itab', ou seja, se 'itab' e 'option' fossem apenas divs, 'option' seria inserida dentro de 'itab' 
-
-            vezes++ // A cada loopada a let vezes (que recebeu 1) ganha +1 e assim vai até o contador chegar em 10
 
             contador++ // A cada loopada o contador recebe +1 e assim vai até parar quando chegar em 10
 
