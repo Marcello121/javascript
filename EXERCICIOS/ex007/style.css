@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: aeonik;
+    src: url(AeonikTRIAL-Regular.otf);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+
+    font-family: aeonik, sans-serif;
+    
+}
+
+body{
+    background-image: url(noox6rybe0xa1.webp);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+main{
+    
+    color: white;
+    text-align: center;
+
+    background-color: rgba(0, 0, 187, 0.877);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.705);
+
+    width: 600px;
+    height: auto;
+    
+    
+}
+
+h1{
+    padding: 15px;
+    margin: 10px;
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.842);
+}
+
+div.input{
+    padding: 20px;
+    display: flex;
+    
+}
+
+input#num{
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+label{
+    font-size: 18px;
+}
+
+input#sub{
+    height: 25px;
+}
+
+
+
+#p1{
+    display: flex;
+    align-items: flex-start;
+    justify-items: center;
+    flex-direction: column;
+}
+
+
+
+
+select{
+    width: 200px;
+    height: 150px;
+    padding: 15px;
+    margin: 10px;
+
+}
+
+input#envi{
+    text-align: center;
+    margin-left: 10px;
+
+    height: 40px;
+    width: 70px;
+}
+
+
+
+
