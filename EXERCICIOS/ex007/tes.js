@@ -1,23 +1,44 @@
 let array = [];
 
-let n1 = document.getElementById ('num');
-
-let numero = Number(n1.value);
 
 
+
+
+
+// Verifica se algum número repetido vai ser inserido
+
+function inLista (nz, lista) {
+    if (lista.indexOf(Number(nz)) != -1 ){
+        return true
+    } else {
+        return false
+    }
+}
 
 
 function adicionar(){
 
-    if (Number(n1.value) >= 100 || Number(n1.value <= 0)){
+    let n1 = document.getElementById ('num');
 
-        alert('É só de 1 a 100 burrão');
+    let numero = Number(n1.value);
+
+    let pTexto = document.getElementById ('p1');
+
+    let texto = document.createElement ('p');
+
+    pTexto.appendChild(texto);
+
+    // Peguei do GPT essa arrow function que nem consigo ler direito pq não consegui resolver de outra forma
+
+    const paragrafos = pTexto.querySelectorAll('p');
+    paragrafos.forEach(p => pTexto.removeChild(p));
+
+    
+    if (numero < 1 || numero > 100 || inLista(numero, array)) {
+
+        alert('É só de 1 a 100 burrão e não pode número repetido');
 
     } else {
-
-        let n1 = document.getElementById ('num');
-
-        let numero = Number(n1.value);
     
         array.push(numero);
 
@@ -27,9 +48,14 @@ function adicionar(){
 
         area.innerText = `Valor ${numero} foi adicionado`;
 
-        numero.value = '';
-
         tab.appendChild(area);
+
+        // Limpa a caixa de input onde os números são digitados e com o num.focus() já deixa selecionado para digitar o número seguinte, ou seja, não precisa clicar em "adicionar" e depois ir clicar de novo na caixa para digitar o número, pode só digitar, adicionar e digitar outro.
+
+        num.value = ''
+        num.focus()
+
+        
         
     }
     
@@ -37,56 +63,64 @@ function adicionar(){
 
 function enviar(){
 
-    let pTexto = document.getElementById ('p1');
+    if (array == 0){
+        alert('Adicione valores')
+    } else {
 
-    // Remove todos os <p> filhos de pTexto
-    const paragrafos = pTexto.querySelectorAll('p');
-    paragrafos.forEach(p => pTexto.removeChild(p));
+        let pTexto = document.getElementById ('p1');
 
+        // Remove todos os <p> filhos de pTexto
+        const paragrafos = pTexto.querySelectorAll('p');
+        paragrafos.forEach(p => pTexto.removeChild(p));
 
-    let texto = document.createElement ('p');
+        let texto = document.createElement ('p');
 
-    let total = array.length;
+        pTexto.appendChild(texto);
 
-    let maior = Math.max(...array);
+        // Resultados
 
-    let menor = Math.min(...array);
+        let total = array.length;
 
-    pTexto.appendChild(texto);
+        let maior = Math.max(...array);
 
-    let somagem = array.reduce ((x, z) => x + z, 0);
+        let menor = Math.min(...array);
 
-    // Estilo
-
-    // Pra conseguir escrever múltiplas mensagens na chamada da função é necessário usar "+=" (sem aspas) para que a mensagem seguinte não sobrescreva a mensagem anterior (isso levaria a mostrar apenas uma mensagem, a última)
-    
-    // É possível usar \n para quebrar a linha e organizar melhor a saída das mensagens
-
-    // Se estiver usando innerHTML posso usar <br>
-
-    texto.style.padding = '15px';
-
-    texto.style.textAlign = 'center'; // Não tem traços na estilização direta em JS, text-align tem que virar textAlign (em camelCase (boas práticas de JS))
-
-    texto.style.marginLeft = '80px'
-
-    texto.style.fontSize = '18px'
-
-    texto.style.textShadow = '2px 2px 2px black'
+        let somagem = array.reduce ((x, z) => x + z, 0);
 
 
-    // Mensagens 
+
+        // Estilo
+
+        // Pra conseguir escrever múltiplas mensagens na chamada da função é necessário usar "+=" (sem aspas) para que a mensagem seguinte não sobrescreva a mensagem anterior (isso levaria a mostrar apenas uma mensagem, a última)
+        
+        // É possível usar \n para quebrar a linha e organizar melhor a saída das mensagens
+
+        // Se estiver usando innerHTML posso usar <br>
+
+        texto.style.padding = '15px';
+
+        texto.style.textAlign = 'center'; // Não tem traços na estilização direta em JS, text-align tem que virar textAlign (em camelCase (boas práticas de JS))
+
+        texto.style.marginLeft = '80px'
+
+        texto.style.fontSize = '18px'
+
+        texto.style.textShadow = '2px 2px 2px black'
 
 
-    texto.innerText += `Ao todo temos ${total} números cadastrados\n \n` 
+        // Mensagens 
 
-    texto.innerText += `O maior número adicionado foi ${maior}\n \n`
 
-    texto.innerText += `O menor número adicionado foi ${menor}\n \n`
+        texto.innerText += `Ao todo temos ${total} números cadastrados\n \n` 
 
-    texto.innerText += `A soma total dos números é ${somagem}\n \n`
+        texto.innerText += `O maior número adicionado foi ${maior}\n \n`
 
-    texto.innerText += `A média total dos números é ${somagem / 6}`
+        texto.innerText += `O menor número adicionado foi ${menor}\n \n`
+
+        texto.innerText += `A soma total dos números é ${somagem}\n \n`
+
+        texto.innerText += `A média total dos números é ${somagem / 6}`
+        }
 
     
 
